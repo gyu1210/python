@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 ## Flask 클래스 생성
 ##__name__: 파일의 이름
@@ -11,4 +11,11 @@ app = Flask(__name__)
 def index():
     return 'Hello World'
 
-app.run
+# 127.0.0.1 = localhost
+# 127.0.0.1:5000/main 이라는 주소로 요청을 하는 경우 아래의 함수를 생성
+
+@app.route('/main')
+def main():
+    return render_template('main.html')
+
+app.run()
