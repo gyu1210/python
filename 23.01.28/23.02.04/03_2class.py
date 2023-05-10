@@ -6,10 +6,10 @@
 
 #     def house_dog(self):
 #        print (self.name, self.age )
-       
 
 # dog1 = dog('Tim', 3)
 # print(dog1.name, dog1.age)
+
 
 # class dog:
 #     def __init__(objective, name, age):
