@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookbook</title>
+</head>
+<body>
+    <h1>Cookbook Recipes for Gyu</h1>
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+                <h2>{{ recipe.name }}</h2>
+                <h3>Ingredients:</h3>
+                <ul>
+                    {% for ingredient in recipe.ingredients %}
+                        <li>{{ ingredient }}</li>
+                    {% endfor %}
+                </ul>
+                <h3>Instructions:</h3>
+                <ol>
+                    {% for instruction in recipe.instructions %}
+                        <li>{{ instruction }}</li>
+                    {% endfor %}
+                </ol>
+                <a href="/remove_recipe/{{ recipe.name }}">Remove Recipe</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/add_recipe">Add Recipe</a>
+</body>
+</html>
