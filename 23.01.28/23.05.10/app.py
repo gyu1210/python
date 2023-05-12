@@ -3,10 +3,11 @@ from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
 class Recipe:
-    def __init__(self, name, ingredients, instructions):
+    def __init__(self, name, ingredients, instructions, cookingtime):
         self.name = name
         self.ingredients = ingredients
         self.instructions = instructions
+        self.cookingtime = cookingtime
 
 recipes = []
 
@@ -20,9 +21,10 @@ def add_recipe():
         name = request.form['name']
         ingredients = request.form['ingredients'].split('\n')
         instructions = request.form['instructions'].split('\n')
-        recipe = Recipe(name, ingredients, instructions)
+        cookingtime = request.form['cookingtime']
+        recipe = Recipe(name, ingredients, instructions, cookingtime)
         recipes.append(recipe)
-        return redirect('/add_recipe')
+        return redirect('/')
     return render_template('add_recipe.html')
 
 @app.route('/remove_recipe/<name>')

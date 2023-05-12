@@ -21,6 +21,7 @@
                         <li>{{ instruction }}</li>
                     {% endfor %}
                 </ol>
+                <h2>{{ recipe.cookingtime }}</h2>
                 <a href="/remove_recipe/{{ recipe.name }}">Remove Recipe</a>
             </li>
         {% endfor %}
