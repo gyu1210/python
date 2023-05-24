@@ -70,3 +70,31 @@ p1 = person('Gyu',29)
 p1.age = 40
 
 print(p1.age)
+
+#class polymorphism
+
+class vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+class car(vehicle):
+    def move(self):
+        print('Drive')
+
+class boat(vehicle):
+    def move(self):
+        print('Sail')
+
+class plane(vehicle):
+    def move(self):
+        print('Fly')
+
+car1 = car('Ford', 'Mustang')
+boat1 = boat('Ibiza','Touring28')
+plane1 = plane('Boeing','747')
+
+for x in (car1, boat1, plane1):
+    print(x.brand,x.model)
+    x.move()
+
