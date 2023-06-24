@@ -1,0 +1,7 @@
+,Unnamed: 0,Ingredient,Amount,Unit,Contains Allergens
+0,0,Flour,200,grams,False
+1,1,Sugar,150,grams,False
+2,2,Butter,100,grams,False
+3,3,Eggs,2,pieces,True
+4,4,Milk,250,milliliters,True
+5,5,Almonds,50,grams,True
