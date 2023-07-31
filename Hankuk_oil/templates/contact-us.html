@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+
+{% if name %}
+
+    <h1> {{name}}, 한국윤활유에 문의주셔서 감사합니다.</h1>
+{% else %}
+<p></p>
+    <h1>제품관련 문의 주시면 24시간 안에 답변 드립니다</h1>
+    
+    <br/>
+    <p>한국종합윤활유 홈페이지 방문을 감사드립니다.</p> 
+
+    <p>저희 한국종합윤활유는 유압작동유, 습동면유, 절삭유, 그리이스, 기어유, 콤푸레샤오일 전문업체로 30년 동안 고객님의 성원으로 지금 이 자리까지 올 수 있었습니다</p>
+    
+    <p>앞으로도 변함없는 고객 여러분들의 관심과 성원으로 더욱더 정진하여 보다 성심성의껏 우수한 품질의 서비스를 제공하고 여러분들의 발전에 기여할 수 있도록 최선을 다하겠습니다.</p>
+    <br/>
+
+    <br/>
+    <h1>제품관련 문의 하는곳</h1>
+    <br/>
+    
+    <br/>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.name.label }}
+        {{ form.name()}}
+        {{ form.phone.label }}
+        {{ form.phone()}}
+        {{ form.email.label }}
+        {{ form.email()}}
+        {{ form.question.label }}
+        {{ form.question()}}
+       
+        {{ form.submit}}
+        <br/>
+
+
+    </form>
+    
+{% endif %}
+
+{% endblock%}
