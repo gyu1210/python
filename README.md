@@ -15,4 +15,4 @@ Seeking new challenges and opportunities to excel in the dynamic world of data a
 - 👯 I’m looking to collaborate on helping people by providing them with the answers they want through creative ideas and analytical skills.
 - 🤔 I’m looking for help in predicting agricultural outcomes using machine learning.
 - 💬 Ask me about how you automated data for food labelling.
-- ⚡ Fun fact: I enjoy exercising, and I hold a black belt!>
+- ⚡ Fun fact: I enjoy exercising, and I hold a black belt! !-->
